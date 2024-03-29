@@ -1,14 +1,41 @@
-export default function SignUp() {
-  return (
-    <div className="flex h-screen w-full items-center justify-center bg-[#f8fafc]">
-      {/* <div className="image-container relative hidden h-full w-1/6 lg:block">
-        <img
-          src="./public/education.jpeg"
-          className="h-full w-full object-cover opacity-75 transition duration-500 ease-in-out"
-          alt="Background Image"
-        />
-      </div> */}
+import { useState } from "react";
+import Button from "../../components/Button";
 
+export default function SignUp() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    class: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Implement your form validation logic here
+  const isFormValid = () => {
+    // Example: Check if all fields are filled
+    return Object.values(formData).every((value) => value.trim() !== "");
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted!");
+  };
+
+  return (
+    <form
+      className="flex h-screen w-full items-center justify-center bg-[#f8fafc]"
+      onSubmit={handleSubmit}
+    >
       <div
         className="relative flex h-full w-2/6 flex-col sm:hidden lg:block"
         style={{
@@ -36,39 +63,54 @@ export default function SignUp() {
               </label>
               <input
                 id="firstName"
+                name="firstName"
                 type="text"
                 placeholder="Enter your first name"
+                value={formData.firstName}
+                onChange={handleChange}
                 className="focus:border-blue-#172554 my-2 w-full rounded-sm border border-gray-300 bg-[#f8fafc] px-3 py-2 text-sm text-black placeholder-gray-400 outline-none focus:outline-none sm:px-2 sm:py-1"
               />
             </div>
+
             <div className="flex flex-col">
               <label htmlFor="lastName" className="mb-1 text-sm font-normal">
                 Last Name
               </label>
               <input
                 id="lastName"
+                name="lastName"
                 type="text"
                 placeholder="Enter your last name"
+                value={formData.lastName}
+                onChange={handleChange}
                 className="focus:border-blue-#172554 my-2 w-full rounded-sm border border-gray-300 bg-[#f8fafc] px-3 py-2 text-sm text-black placeholder-gray-400 outline-none focus:outline-none sm:px-2 sm:py-1"
               />
             </div>
+
             <div className="flex flex-col">
               <label htmlFor="email" className="mb-1 text-sm font-normal">
                 E-mail
               </label>
               <input
                 id="email"
-                type="email"
+                name="email"
+                type="text"
                 placeholder="Enter a valid email address"
+                value={formData.email}
+                onChange={handleChange}
                 className="focus:border-blue-#172554 my-2 w-full rounded-sm border border-gray-300 bg-[#f8fafc] px-3 py-2 text-sm text-black placeholder-gray-400 outline-none focus:outline-none sm:px-2 sm:py-1"
               />
             </div>
+
             <div className="flex flex-col">
               <label htmlFor="class" className="mb-1 text-sm font-normal">
                 Class
               </label>
               <select
                 id="class"
+                name="class"
+                value={formData.class}
+                onChange={handleChange}
                 className="my-2 w-full cursor-pointer rounded-sm border border-gray-300 bg-[#f8fafc] px-3 py-2 text-sm text-black placeholder-gray-400 outline-none focus:outline-none sm:px-2 sm:py-1"
               >
                 <option value="" disabled selected>
@@ -82,17 +124,22 @@ export default function SignUp() {
                 <option value="ss3">SS3</option>
               </select>
             </div>
+
             <div className="flex flex-col">
               <label htmlFor="password" className="mb-1 text-sm font-normal">
                 Password
               </label>
               <input
                 id="password"
+                name="password"
                 type="password"
+                value={formData.password}
+                onChange={handleChange}
                 placeholder="Enter a strong password"
                 className="focus:border-blue-[#172554] my-2 w-full rounded-sm border border-gray-300 bg-[#f8fafc] px-3 py-2 text-sm text-black placeholder-gray-400 outline-none focus:outline-none sm:px-2 sm:py-1"
               />
             </div>
+
             <div className="flex flex-col">
               <label
                 htmlFor="confirmPassword"
@@ -102,7 +149,10 @@ export default function SignUp() {
               </label>
               <input
                 id="confirmPassword"
+                name="confirmPassword"
                 type="password"
+                value={formData.confirmPassword}
+                onChange={handleChange}
                 placeholder="Confirm your password"
                 className="focus:border-blue-[#172554] my-2 w-full rounded-sm border border-gray-300 bg-[#f8fafc] px-3 py-2 text-sm text-black placeholder-gray-400 outline-none focus:outline-none sm:px-2 sm:py-1"
               />
@@ -110,12 +160,11 @@ export default function SignUp() {
           </div>
 
           <div className="mt-8 flex w-full items-center justify-center sm:mb-0 lg:mb-5">
-            <button className="flex w-full items-center  justify-center rounded-md bg-[#172554] p-4 text-center  font-semibold text-white">
-              Submit
-            </button>
+            {/* Pass disabled prop based on form validation */}
+            <Button disabled={!isFormValid()}>Submit</Button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 }
