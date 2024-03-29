@@ -9,69 +9,50 @@ const Main = () => {
       {/*Main section start here */}
       <div
         id="main-section"
-        className="grid h-screen w-full grid-cols-1 gap-4 lg:grid-cols-3"
+        className="grid h-screen  w-full grid-cols-1 gap-4 lg:grid-cols-3"
       >
         <div
           id="left"
           className="col-span-2 flex h-full flex-col items-center justify-between gap-3 p-2"
         >
-          <div className="mb-4 grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
+          <div className="mb-4  grid w-full grid-cols-1 gap-4 text-white lg:grid-cols-3">
             <div className="flex h-full w-full flex-col">
-              <div className="hover:scale-10% flex h-full w-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-200 p-5 transition-transform hover:rotate-[5deg]">
-                <div className="flex w-full items-center justify-between">
-                  <h1 className="text-md font-semibold text-black">Jss1</h1>
-                  <h1 className="font-semibold text-green-600">21.75%</h1>
+              <div className="hover:scale-10% flex h-full w-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-950 p-5 transition-transform hover:rotate-[5deg]">
+                <div className="flex w-full items-center justify-end">
+                  <h1 className=" font-semibold text-blue-600">21.75%</h1>
                 </div>
                 {/**/}
-                <div className="flex w-full items-center justify-between">
-                  <div className="flex flex-col items-start justify-center gap-1">
-                    <h1 className="text-3xl font-semibold text-black">
-                      10.328
-                    </h1>
-                    <p className="text-slate-700">...</p>
-                  </div>
-                  <div className="cursor-pointer rounded-full bg-blue-400 p-3 text-black hover:bg-blue-500">
-                    For
+                <div className="flex w-full items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-1">
+                    <h1 className="text-3xl font-semibold ">JSS1</h1>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="flex h-full w-full flex-col">
-              <div className="hover:scale-10% flex h-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-200 p-5 transition-transform hover:rotate-[5deg]">
-                <div className="flex w-full items-center justify-between">
-                  <h1 className="text-md font-semibold text-black">Jss1</h1>
-                  <h1 className="font-semibold text-green-600">21.75%</h1>
+              <div className="hover:scale-10% flex h-full w-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-950 p-5 transition-transform hover:rotate-[5deg]">
+                <div className="flex w-full items-center justify-end">
+                  <h1 className=" font-semibold text-blue-600">10.75%</h1>
                 </div>
-                <div className="flex w-full items-center justify-between">
-                  <div className="flex flex-col items-start justify-center gap-1">
-                    <h1 className="text-3xl font-semibold text-black">
-                      10.328
-                    </h1>
-                    <p className="text-slate-700">...</p>
-                  </div>
-                  <div className="cursor-pointer rounded-full bg-blue-400 p-3 text-black hover:bg-blue-500">
-                    For
+                {/**/}
+                <div className="flex w-full items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-1">
+                    <h1 className="text-3xl font-semibold ">JSS2</h1>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="flex h-full w-full flex-col">
-              <div className="hover:scale-10% flex h-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-200 p-5 transition-transform hover:rotate-[5deg]">
-                <div className="flex w-full items-center justify-between">
-                  <h1 className="text-md font-semibold text-black">Jss1</h1>
-                  <h1 className="font-semibold text-green-600">21.75%</h1>
+              <div className="hover:scale-10% flex h-full w-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-950 p-5 transition-transform hover:rotate-[5deg]">
+                <div className="flex w-full items-center justify-end">
+                  <h1 className=" font-semibold text-blue-600">18.75%</h1>
                 </div>
-                <div className="flex w-full items-center justify-between">
-                  <div className="flex flex-col items-start justify-center gap-1">
-                    <h1 className="text-3xl font-semibold text-black">
-                      10.328
-                    </h1>
-                    <p className="text-slate-700">...</p>
-                  </div>
-                  <div className="cursor-pointer rounded-full bg-blue-400 p-3 text-black hover:bg-blue-500">
-                    For
+                {/**/}
+                <div className="flex w-full items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-1">
+                    <h1 className="text-3xl font-semibold ">JSS3</h1>
                   </div>
                 </div>
               </div>
@@ -89,7 +70,7 @@ const Main = () => {
         >
           <div
             id="top"
-            className="flex h-fit w-full flex-col items-center gap-6 rounded-xl bg-slate-100 p-8"
+            className="flex h-fit w-full flex-col items-center gap-6 rounded-xl bg-blue-950 p-8 text-white"
           >
             <div
               id="image-box"
@@ -101,10 +82,10 @@ const Main = () => {
                 alt="student image"
               />
               <div className="flex flex-col items-center justify-center">
-                <h1 className="text-2xl font-bold text-black">
+                <h1 className="text-2xl font-bold ">
                   Name: <span className="text-base">Colos</span>
                 </h1>
-                <p className="text-lg text-slate-700">JSS1A</p>
+                <p className="text-lg ">JSS1A</p>
               </div>
             </div>
 
@@ -112,23 +93,9 @@ const Main = () => {
               id="student-info"
               className="flex   w-full items-center justify-between gap-8"
             >
-              <div className="flex flex-col items-center justify-center">
-                <h1 className="text-base font-semibold text-black">
-                  Grade <span>3rd</span>
-                </h1>
-                <p>Pass</p>
-              </div>
-
-              <div className="flex flex-col items-center justify-center">
-                <h1 className="text-base font-semibold text-black">
-                  Grade <span>3rd</span>
-                </h1>
-                <p>Pass</p>
-              </div>
-
-              <div className="flex flex-col items-center justify-center">
-                <h1 className="text-base font-semibold text-black">
-                  Grade <span>3rd</span>
+              <div className="flex flex-row gap-1 items-center justify-center">
+                <h1 className="text-base font-semibold ">
+                  Grade : <span>3rd-</span>
                 </h1>
                 <p>Pass</p>
               </div>
@@ -141,7 +108,7 @@ const Main = () => {
           >
             <div className="flex w-full flex-col items-center justify-between gap-2 md:flex-row">
               <h1 className="text-md text-white">Lorem, ipsum.</h1>
-              <button className="text-md cursor-pointer rounded-xl bg-green-600 px-6 py-1 text-white">
+              <button className="text-md cursor-pointer rounded-xl bg-blue-600 px-6 py-1 text-white">
                 XX
               </button>
             </div>

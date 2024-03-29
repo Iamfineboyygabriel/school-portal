@@ -37,12 +37,12 @@ export const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
+      label: "Average",
       data: [3000, 1000, 4000, 7000, 2000],
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
-      label: "Dataset 2",
+      label: "Report data",
       data: [3000, 2000, 5000, 3000, 2000],
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
