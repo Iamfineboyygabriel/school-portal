@@ -1,3 +1,4 @@
+import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,7 +8,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -15,7 +15,7 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend,
+  Legend
 );
 
 export const options = {
@@ -26,31 +26,31 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Bar Chart",
+      text: "Student Performance Chart",
     },
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = ["Math", "Science", "English", "History", "Geography", "Art"];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: "Average",
-      data: [3000, 1000, 4000, 7000, 2000],
+      label: "Average Grade",
+      data: [85, 90, 78, 82, 88, 95], 
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
-      label: "Report data",
-      data: [3000, 2000, 5000, 3000, 2000],
+      label: "Top Performer",
+      data: [90, 92, 85, 88, 92, 98], 
       backgroundColor: "rgba(53, 162, 235, 0.5)",
     },
   ],
 };
 
-const Ourchat = () => {
+const OurChart = () => {
   return <Bar options={options} data={data} />;
 };
 
-export default Ourchat;
+export default OurChart;

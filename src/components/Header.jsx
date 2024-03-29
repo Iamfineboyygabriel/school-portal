@@ -16,7 +16,7 @@ const Header = () => {
           <img
             src={fineboy}
             alt="student-image"
-            className="h-12 w-12 rounded-full"
+            className="h-10 w-10 rounded-full"
           />
           <div className="flex flex-col items-start justify-center">
             <div className="-mb-1 flex items-center justify-center gap-2">
