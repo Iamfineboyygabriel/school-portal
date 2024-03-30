@@ -4,6 +4,7 @@ import fineboy from "../../../../public/fineboy.jpg";
 import { useState } from "react";
 import { term } from "../../../components/Data";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   const [selectedTerms, setSelectedTerms] = useState({});
@@ -33,7 +34,10 @@ const Main = () => {
                 key={classItem.class}
                 className="flex h-full w-full flex-col"
               >
-                <div className="hover:scale-10% flex h-full w-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-950 p-5 transition-transform hover:rotate-[5deg]">
+                <Link
+                  to={`/portal/${classItem.class}/first-term`} // Example URL with class and term parameters
+                  className="hover:scale-10% flex h-full w-full transform cursor-pointer flex-col items-center justify-center gap-5 rounded-xl bg-blue-950 p-5 transition-transform hover:rotate-[5deg]"
+                >
                   <div className="flex w-full items-center justify-end">
                     <select
                       value={selectedTerms[classItem.class] || ""}
@@ -55,7 +59,7 @@ const Main = () => {
                       </h1>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
@@ -64,7 +68,7 @@ const Main = () => {
         </div>
         {/** left section ends here */}
 
-        {/** left section start here */}
+        {/** right section starts here */}
         <div
           id="right"
           className="flex h-full flex-col items-center justify-between gap-4 p-2"
@@ -102,7 +106,7 @@ const Main = () => {
               </div>
             </div>
           </div>
-          {/** black-bg */}
+          {/* black-bg */}
           <div
             id="button"
             className="flex h-full w-full flex-col items-center  gap-2 rounded-xl bg-blue-950 p-4"
@@ -122,6 +126,7 @@ const Main = () => {
             <div className="flex h-fit w-full flex-col items-center justify-between gap-4 md:flex-row"></div>
           </div>
         </div>
+        {/* right section ends here */}
       </div>
     </section>
   );
